@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="text-center ">
+    <button onclick="naeem()" id="dropDownButton" class="bg-orange-500 text-6xl rounded-full px-4 py-1  mt-4"> Presh me</button>
+  </div>
+  <div class=" hidden flex-wrap place-content-center" id="dropDownItem">
+    <ul class="w-fit space-y-1 text-3xl" >
+      <li class="bg-lime-400 hover:bg-teal-500">
+        <a href="">Home</a>
+      </li>
+      <li class="bg-lime-400 hover:bg-teal-500">
+        <a href="">About</a>
+      </li>
+      <li class="bg-lime-400 hover:bg-teal-500">
+        <a href="">Contact</a>
+      </li>
+      <li class="bg-lime-400 hover:bg-teal-500">
+        <a href="">Go on</a>
+      </li>
+    </ul>
+  </div>
+  <script>
+    let buttonClickOrNot = false;
+    function naeem(){
+      if(!buttonClickOrNot){
+        document.getElementById("dropDownItem").classList.replace("hidden","flex");
+        buttonClickOrNot = true;
+        document.getElementById("dropDownButton").innerHTML="close";
+      }
+      else{
+        document.getElementById("dropDownItem").classList.replace("flex","hidden");
+        buttonClickOrNot = false;
+        document.getElementById("dropDownButton").innerHTML="Menu";
+
+
+      }
+
+    }
+
+  </script>
+</body>
+
+</html>
